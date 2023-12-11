@@ -20,7 +20,7 @@ const Header = () => {
         }
     }, [])
     return (
-        <header ref={headerRef} className={`fixed px-2 pe-4 flex gap-5 items-center shadow-xl z-50 ${styles.header} ${styles.active}`}>
+        <header ref={headerRef} className={`fixed px-2 pe-4 flex gap-5 items-center justify-between md:justify-start shadow-xl z-50 ${styles.header} ${styles.active}`}>
             <div className=" cursor-pointer">
                 <RotateAnimation />
             </div>

@@ -6,3 +6,8 @@ body * {
   line-height: 1.5;
   letter-spacing: 0.1rem;
 }
+
+.bland {
+  transform: translateY(-40%);
+  mix-blend-mode: difference;
+}

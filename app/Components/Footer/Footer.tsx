@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                     </GradiantBackligh>
                 </div>
-                <div className="px-10 flex justify-between items-center mt-16 md:mt-0">
+                <div className="px-10 flex justify-between items-center mt-5 mb-20 md:mt-0 md:mb-0">
                     <div className="">
                         <RingAnimation dimension="7rem">
                             <Link className="w-full h-full" target='_blank' href='https://www.linkedin.com/in/anmolhive/'>
@@ -51,6 +51,10 @@ const Footer = () => {
                 <WaveMotion />
                 <div className=" h-20 w-full bg-white flex items-center justify-center">
                     <p className="text-sky-600">Copyright © 2023 Anmol Singh. All rights reserved.</p>
+                </div>
+                <div className={`w-full text-center text-xl md:text-3xl text-white bland absolute -top-2 md:top-0`}>
+                    Design and Develop by <br />
+                    <span className="text-5xl md:text-8xl font-bold uppercase">Anmol Singh</span>
                 </div>
             </div>
         </footer>
