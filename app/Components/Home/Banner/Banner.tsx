@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Styles from './Banner.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +8,14 @@ import LucysBackground from '../../LucysBackgroud/LucysBackground';
 
 const Banner = () => {
     const bannerRef = useRef<HTMLDivElement>(null);
+    const [isMobil, setIsMobile] = useState(true);
+    useEffect(() => {
+        if (window) {
+            if (window.innerWidth > 767) {
+                setIsMobile(false);
+            }
+        }
+    }, [])
     useEffect(() => {
         const banner = bannerRef?.current;
         if (banner) {
@@ -35,9 +43,11 @@ const Banner = () => {
     }, [])
     return (
         <section className={`h-screen ${Styles.section}`}>
-            <div className=' absolute inset-0'>
+            {!isMobil &&
+                <div className=' absolute inset-0'>
                     <LucysBackground />
                 </div>
+            }
             <div className={`h-full relative ${Styles.bg}`}>
                 <div className={`container mx-auto h-full py-5 ${Styles.container}`}>
                     <div ref={bannerRef} className={`h-full flex flex-col justify-center items-center rounded-3xl ${Styles.banner}`}>

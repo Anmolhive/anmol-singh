@@ -21,10 +21,8 @@ const Header = () => {
     }, [])
     return (
         <header ref={headerRef} className={`fixed px-2 pe-4 flex gap-5 items-center shadow-xl z-50 ${styles.header} ${styles.active}`}>
-            <div className="">
-                <Link href="/">
-                    <RotateAnimation />
-                </Link>
+            <div className=" cursor-pointer">
+                <RotateAnimation />
             </div>
             <div className={styles.icons}>
                 <RingAnimation className='w-full flex justify-center items-center' dimension='5rem'>
