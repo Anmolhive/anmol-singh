@@ -9,7 +9,7 @@
   perspective: 100rem;
   position: relative;
   transform-style: preserve-3d;
-  height: 75vh;
+  height: 50vh;
 }
 
 .slider > div {
@@ -40,6 +40,9 @@
 }
 
 @media (min-width: 767px){
+    .slider {
+        height: 75vh;
+    }
     .slider > div.active > img {
         animation: scrollImage var(--time) linear infinite forwards;
     }
