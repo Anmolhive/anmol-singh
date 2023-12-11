@@ -3,10 +3,10 @@ import Styles from './SectionSection.module.css';
 
 const SeconSection = () => {
     return (
-        <section className='bg-white pb-40 pt-20'>
+        <section className='bg-white pb-20 md:pb-40 pt-20'>
             <h2 className="text-center text-7xl text-zinc-800 font-bold uppercase">Skills</h2>
             <div className={`container mx-auto p-10 h-full gap-10 md:gap-20 ${Styles.container}`}>
-                <div className={`rounded-2xl h-72 my-20 relative ${Styles.cardContainer}`} style={{'--bg': 'rgba(34, 197, 94, .7)'} as any}>
+                <div className={`rounded-2xl h-72 my-20 relative ${Styles.cardContainer }`} style={{'--bg': 'rgba(34, 197, 94, .7)'} as any}>
                     <div className="absolute p-5">
                     <Image src='/language/node.svg' alt='' width={530} height={350} />
                     </div>

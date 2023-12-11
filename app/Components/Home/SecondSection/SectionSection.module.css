@@ -15,6 +15,13 @@
   --parallax-speed: -1.5;
 }
 
+@media (max-width: 767px) {
+  .cardContainer img{
+    width: 50%;
+    margin: auto;
+  }
+}
+
 .wrapper {
   position: relative;
   transform: translateX(2rem);

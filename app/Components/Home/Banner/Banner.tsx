@@ -42,7 +42,7 @@ const Banner = () => {
         }
     }, [])
     return (
-        <section className={`h-screen ${Styles.section}`}>
+        <section className={`md:h-screen ${Styles.section}`}>
             {!isMobil &&
                 <div className=' absolute inset-0'>
                     <LucysBackground />

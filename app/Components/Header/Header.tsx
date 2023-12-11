@@ -47,7 +47,7 @@ const Header = () => {
             </div>
             <div className="">
             </div>
-            <nav className='w-full'>
+            <nav className='w-full hidden md:block'>
                 <ul className='flex gap-10 justify-end w-full text-white font-bold'>
                     <li className='flex gap-3 items-center'>Design and Develop by <span className='text-3xl'>Anmol Singh</span></li>
                 </ul>

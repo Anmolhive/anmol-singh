@@ -1,13 +1,19 @@
 .section {
-    height: 200vh;
-    background-image: url(/bg-3.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    backdrop-filter: brightness(.5);
+  height: 200vh;
+  background-image: url(/bg-3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: brightness(0.5);
+}
+
+@media (max-width: 767px) {
+  .section {
+    height: 100vh;
+  }
 }
 
 .section > div {
-    backdrop-filter: blur(.7rem);
+  backdrop-filter: blur(0.7rem);
 }
 
 .content {
@@ -42,7 +48,7 @@
   z-index: -1;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .content svg {
     right: 10%;
   }
@@ -53,7 +59,7 @@
 }
 
 @media only screen and (orientation: portrait) {
-    .content svg {
+  .content svg {
     /* display: none; */
   }
 }

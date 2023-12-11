@@ -6,24 +6,24 @@ import GradiantBackligh from "../GradiantBacklight/GradiantBackligh";
 
 const Footer = () => {
     return (
-        <footer className="relative h-screen bg-neutral-950">
-            <div className="container mx-auto">
+        <footer className="relative md:h-screen bg-neutral-950">
+            <div className="container mx-auto pb-32 md:pb-0">
                 <div className="p-5 md:p-10">
                     <GradiantBackligh bg="#020617">
                         <div className="p-5 text-2xl bg-white rounded-lg before:rounded-lg ">
-                            <p className="my-3 text-sm md:text-base">
+                            <p className="my-3 text-sm md:text-lg">
                                 Thank you for visiting my website!
                             </p>
-                            <p className="my-3 text-sm md:text-base">
+                            <p className="my-3 text-sm md:text-lg">
                                 Stay connected and follow me on <a className="link link-hover link-accent" href="">Linkedin</a> and <a href="https://github.com/Anmolhive">Github</a> for the latest updates, tech insights, and more.
                             </p>
-                            <p className="my-3 text-sm md:text-base">
+                            <p className="my-3 text-sm md:text-lg">
                                 Feel free to reach out if you have any inquiries, collaboration proposals, or just want to say hello!
                             </p>
                         </div>
                     </GradiantBackligh>
                 </div>
-                <div className="px-10 flex justify-between items-center">
+                <div className="px-10 flex justify-between items-center mt-16 md:mt-0">
                     <div className="">
                         <RingAnimation dimension="7rem">
                             <Link className="w-full h-full" target='_blank' href='https://www.linkedin.com/in/anmolhive/'>

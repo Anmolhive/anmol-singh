@@ -30,16 +30,16 @@ const TimeLine = () => {
                         </g>
                     </svg>
 
-                    <h3 className="text-white  md:text-3xl uppercase text-center fixed md:top-12 left-2 md:left-5">
+                    <h3 className="text-white  md:text-3xl uppercase text-center fixed top-10 md:top-12 md:left-5 w-40 md:w-auto">
                         Join as PHP Developer<br /><span className=' text-blue-500'>Aug 2021</span>
                     </h3>
-                    <h3 className="text-white md:text-3xl uppercase text-center fixed top-28  md:top-12 right-1 md:right-6">
+                    <h3 className="text-white md:text-3xl uppercase text-center fixed top-10  md:top-12 right-1 md:right-6">
                         Start Frontend<br /><span className=' text-blue-500'>Nov 2021</span>
                     </h3>
-                    <h3 className="text-white md:text-3xl uppercase text-center fixed  top-72 md:right-6">
+                    <h3 className="text-white md:text-3xl uppercase text-center fixed top-60 md:right-6">
                         Become Full Stack<br /><span className=' text-blue-500'>Feb 2021</span>
                     </h3>
-                    <h3 className="text-white md:text-3xl uppercase text-center fixed top-1/2 md:right-96 md:-translate-x-16 -translate-y-5">
+                    <h3 className="text-white md:text-3xl uppercase text-center fixed top-1/2 right-1/3 md:right-96 md:-translate-x-16 -translate-y-5">
                         Software Engineers<br /><span className=' text-blue-500'>Aug 2022</span>
                     </h3>
                 </div>

@@ -2,7 +2,7 @@ import BlurText from '../BlurText/BlurText';
 import Styles from './AboutMe.module.css';
 const AboutMe = () => {
     return (
-        <section className={`h-screen ${Styles.section}`}>
+        <section className={`md:h-screen ${Styles.section}`}>
             <div className="h-full">
                 <div className="container mx-auto p-5 md:p-20 h-full">
                     <div className={`h-full rounded-3xl flex flex-col md:flex-row ${Styles.container}`}>

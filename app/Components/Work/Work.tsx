@@ -93,52 +93,52 @@ const Work = () => {
                 <h2 className="text-center text-white text-5xl md:text-8xl font-bold">Web Design Portfolio</h2>
                 <div className="mt-20 relative">
                     <div ref={sliderRef} className={`${Styles.slider}`}>
-                        <div className=' overflow-hidden' style={{'--time': '30s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '30s' } as any}>
                             <Image src='/website/1.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '15s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '15s' } as any}>
                             <Image src='/website/3.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{ '--time': '30s' } as any}>
+                        <div className=' md:overflow-hidden' style={{ '--time': '30s' } as any}>
                             <Image src='/website/4.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '55s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '55s' } as any}>
                             <Image src='/website/5.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '40s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '40s' } as any}>
                             <Image src='/website/7.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '50s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '50s' } as any}>
                             <Image src='/website/8.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '60s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '60s' } as any}>
                             <Image src='/website/9.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '20s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '20s' } as any}>
                             <Image src='/website/10.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '18s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '18s' } as any}>
                             <Image src='/website/11.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '50s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '50s' } as any}>
                             <Image src='/website/12.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '18s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '18s' } as any}>
                             <Image src='/website/13.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '60s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '60s' } as any}>
                             <Image src='/website/14.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '65s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '65s' } as any}>
                             <Image src='/website/15.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '35s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '35s' } as any}>
                             <Image src='/website/16.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '35s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '35s' } as any}>
                             <Image src='/website/17.png' alt='' width={1366} height={4256} />
                         </div>
-                        <div className=' overflow-hidden' style={{'--time': '65s' } as any}>
+                        <div className=' md:overflow-hidden' style={{'--time': '65s' } as any}>
                             <Image src='/website/18.png' alt='' width={1366} height={4256} />
                         </div>
                     </div>

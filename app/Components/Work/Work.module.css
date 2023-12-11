@@ -24,14 +24,25 @@
     transition: transform 500ms ease-in-out, filter 300ms ease, outline 500ms linear;
 }
 
+@media (max-width: 767px) {
+    .slider > div {
+        overflow: auto;
+    }
+}
+
 .slider > div.active {
     outline: .5rem solid rgba(255, 255, 255, .7);
 }
 
 .slider > div.active > img {
     --y: calc((100% - 75vh) * -1);
-    position: relative;
-    animation: scrollImage var(--time) linear infinite forwards;
+    position: relative; 
+}
+
+@media (min-width: 767px){
+    .slider > div.active > img {
+        animation: scrollImage var(--time) linear infinite forwards;
+    }
 }
 
 @keyframes scrollImage {
