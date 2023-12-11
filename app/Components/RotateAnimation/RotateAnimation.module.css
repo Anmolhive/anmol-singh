@@ -1,0 +1,66 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/compass/1.0.3/compass.min.css");
+
+@keyframes shimmer {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.ul {
+  --dimension: 5rem;
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  background-color: hsl(90 100% 100% / 1);
+  position: relative;
+  display: block;
+  padding: 0;
+  width: var(--dimension);
+  height: var(--dimension);
+  list-style: none;
+  border-radius: 200px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px ;
+}
+
+.ul li {
+  animation-delay: 0.05s;
+  transform-origin: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  font-size: calc(var(--dimension) - 1rem);
+  color: rgba(120, 120, 120, 0.3);
+  animation: shimmer 2s infinite;
+}
+
+.ul li:nth-child(2) {
+  animation-delay: 0.2s;
+  color: rgba(120, 0, 0, 0.3);
+}
+
+.ul li:nth-child(3) {
+  animation-delay: 0.35s;
+  color: rgba(120, 120, 0, 0.3);
+}
+
+.ul li:nth-child(4) {
+  animation-delay: 0.5s;
+  color: rgba(0, 120, 0, 0.3);
+}
+
+.ul li:nth-child(5) {
+  color: rgba(0, 120, 120, 0.3);
+  animation-delay: 0.65s;
+}
+
+.ul li:nth-child(6) {
+  color: rgba(0, 0, 120, 0.3);
+  animation-delay: 0.8s;
+}
+
+.ul li:nth-child(7) {
+  color: rgba(120, 0, 120, 0.3);
+  animation-delay: 1s;
+}

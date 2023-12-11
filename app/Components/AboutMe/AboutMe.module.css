@@ -1,0 +1,28 @@
+.section {
+  background-image: url(/bg-2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section > div {
+  backdrop-filter: blur(0.5rem);
+}
+
+.container {
+  border: 0.3rem solid rgba(255, 255, 255, 0.5);
+  background-image: url(/bg-2.jpg);
+  background-size: 99%;
+  background-position: 26% -9%;
+  background-attachment: fixed;
+}
+
+.left {
+  
+  font-size: 5rem;
+  color: rgba(255, 255, 255, .3);
+}
+
+.right {
+  backdrop-filter: blur(5rem);
+}
+

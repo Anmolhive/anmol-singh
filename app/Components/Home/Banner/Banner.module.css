@@ -1,0 +1,119 @@
+.section {
+  /* background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(244, 63, 94, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 0, 0, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(51, 102, 255, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(67, 56, 202, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(0, 204, 255, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(234, 88, 12, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(59, 130, 246, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 0, 102, 0.7),
+    rgba(255, 255, 255, 0.5),
+    rgba(102, 255, 153, 0.7),
+    rgba(255, 255, 255, 0.5)
+  );
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg {
+  backdrop-filter: blur(4rem);
+  background-color: hsl(0 100% 100% / 0.3);
+}
+
+.container {
+  perspective: 100rem;
+  transform-style: preserve-3d;
+  position: relative;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  --parallax-speed: 15;
+}
+
+.banner {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transform: translateZ(0.5rem);
+  scale: 0.95;
+  backdrop-filter: blur(2rem);
+  background-color: hsl(0 0% 0%/0.3);
+  background-image: url(/bg.jpg);
+  background-size: cover;
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 150px));
+  }
+}
+
+.banner div * {
+  scale: 1.5s;
+}
+
+.banner * {
+  transition: all 200ms linear;
+}
+
+.banner h1 {
+  text-shadow: rgba(255, 255, 255, 0.1) 0px 0.3rem 0.6rem,
+    rgba(255, 255, 255, 0.1) 0px 0.2rem 0.2rem;
+  letter-spacing: 0.5rem;
+}
+
+.banner h2 {
+  text-shadow: rgba(255, 255, 255, 0.1) 0px 0.3rem 0.6rem,
+    rgba(255, 255, 255, 0.1) 0px 0.2rem 0.2rem;
+  letter-spacing: 0.45rem;
+}
+
+.bgBlur {
+  position: relative;
+  backdrop-filter: brightness(0.5) saturate(1.5);
+  -webkit-backdrop-filter: brightness(0.5) saturate(1.5);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px,
+    rgba(255, 255, 255, 0.2) 0px 7px 13px -3px,
+    rgba(255, 255, 255, 0.1) 0px -3px 0px inset;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  --parallax-speed: -1;
+}
+
+.logo {
+  background-color: hsl(0 100% 100% / 0.3);
+  backdrop-filter: blur(50px);
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px,
+    rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+  transition: all 400ms linear;
+}
+
+.logo:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 200ms ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.6) 0px 2px 4px,
+    rgba(255, 255, 255, 0.5) 0px 7px 13px -3px,
+    rgba(255, 255, 255, 0.4) 0px -3px 0px inset;
+}

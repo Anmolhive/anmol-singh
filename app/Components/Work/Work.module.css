@@ -1,0 +1,136 @@
+.bg {
+    position: relative;
+    z-index: 10;
+    background-color: hwb(0 0% 100% / 0.3);
+    backdrop-filter: blur(2rem);
+}
+
+.slider {
+  perspective: 100rem;
+  position: relative;
+  transform-style: preserve-3d;
+  height: 75vh;
+}
+
+.slider > div {
+    position: fixed;
+    height: 100%;
+    width: 75%;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(0%, -50%, -3rem) rotateY(-45deg);
+    filter: brightness(.3);
+    border-radius: 2rem;
+    transition: transform 500ms ease-in-out, filter 300ms ease, outline 500ms linear;
+}
+
+.slider > div.active {
+    outline: .5rem solid rgba(255, 255, 255, .7);
+}
+
+.slider > div.active > img {
+    --y: calc((100% - 75vh) * -1);
+    position: relative;
+    animation: scrollImage var(--time) linear infinite forwards;
+}
+
+@keyframes scrollImage {
+    from, to {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(var(--y));
+    }
+}
+
+.sliderNext {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    height: 107%;
+    width: 5rem;
+    background: radial-gradient(rgba(0, 0, 0 , .3) 0% 10%, transparent);
+}
+
+.sliderPrev {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    height: 107%;
+    width: 5rem;
+    background: radial-gradient(rgba(0, 0, 0 , .3) 0% 10%, transparent);
+}
+
+.sliderNext svg, .sliderPrev svg {
+    width: 3rem;
+    height: 3rem;
+    pointer-events: none;
+}
+
+.disabled {
+    opacity: .2;
+    transition: opacity 500ms ease-in-out;
+}
+
+.disabled svg path{
+    fill: #334155;
+    transition: fill 500ms ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .slider > div {
+        width: 95%;
+    }
+
+    .sliderNext, .sliderPrev {
+        width: 3rem;
+    }
+
+    .sliderNext{
+        transform: translate(-10%, -50%);
+    }
+
+    .sliderPrev {
+        transform: translate(-80%, -50%);
+    }
+
+    .sliderNext svg, .sliderPrev svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.grdient_1, .grdient_2, .grdient_3 {
+    border-radius: 100%;
+    z-index: 0;
+}
+
+.grdient_1{
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(#ef4444, transparent);
+    top: 0;
+    left: 0;
+    transform: translate(10%, 10%);
+}
+
+.grdient_2 {
+    width: 40rem;
+    height: 40rem;
+    background: radial-gradient(#3b82f6, transparent);
+    top: 0;
+    left: 50%;
+    transform: translate(10%, -10%);
+}
+
+.grdient_3 {
+    width: 50rem;
+    height: 50rem;
+    background: radial-gradient(#bef264, transparent);
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

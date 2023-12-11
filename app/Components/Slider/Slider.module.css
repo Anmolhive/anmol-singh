@@ -1,0 +1,124 @@
+@keyframes squeeze {
+  entry 0% {
+    clip-path: inset(0% 100% 0% 0% round 30px);
+  }
+
+  entry 100% {
+    clip-path: inset(0% 0% 0% 0% round 30px);
+  }
+
+  exit 0% {
+    clip-path: inset(0% 0% 0% 0% round 30px);
+  }
+
+  exit 100% {
+    clip-path: inset(0% 0% 0% 100% round 30px);
+  }
+}
+
+@keyframes stay-centered {
+  entry 0% {
+    translate: -50%;
+  }
+
+  entry 100% {
+    translate: 0%;
+  }
+
+  exit 0% {
+    translate: 0%;
+  }
+
+  exit 100% {
+    translate: 50%;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.parallaxousel {
+  container-type: inline-size;
+
+  display: flex;
+  padding: 2rem;
+  scroll-padding: 2rem;
+  gap: 1rem;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.parallaxousel > .parallaxItem {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+.parallaxItem {
+  max-inline-size: 70vh;
+  max-inline-size: 70svw;
+  max-block-size: 50vw;
+
+  display: grid;
+  place-items: end start;
+
+  animation: squeeze linear both;
+  animation-timeline: view(inline);
+  timeline-scope: --parallax-item;
+}
+
+.parallaxItem picture {
+  height: 50vw;
+  grid-area: 1/1;
+}
+.parallaxItem img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+
+  animation: stay-centered linear both;
+  animation-timeline: view(inline);
+  timeline-scope: --parallax-item;
+}
+
+.parallaxItem > div {
+  grid-area: 1/1;
+}
+
+.parallaxousel {
+  height: 100svh;
+  overflow: auto;
+}
+
+.itemContainer {
+  overflow: scroll;
+  position: relative;
+}
+
+.itemContainer, .parallaxousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.itemContainer::-webkit-scrollbar, .parallaxousel::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  position: relative;
+  animation: scrollUpDown 10s infinite alternate;
+}
+
+@keyframes scrollUpDown {
+  0%,
+  100% {
+    bottom: 0%;
+  }
+
+  50% {
+    bottom: calc(100% - 65vh);
+  }
+}

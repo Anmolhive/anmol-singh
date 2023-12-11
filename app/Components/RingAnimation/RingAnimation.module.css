@@ -1,0 +1,127 @@
+.rings{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--dimension);
+    height: var(--dimension);
+}
+
+.rings > div {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.rings span{
+    top: 0;
+    left: 0;
+    width: var(--dimension);
+    height: var(--dimension);
+    background-color: transparent;
+    border: .5rem solid;
+    display: block;
+    border-radius: 50%;
+    border-color: transparent;
+    position: absolute;
+}
+
+@media (max-width: 767px) {
+  .rings{
+    width: calc(var(--dimension) - 1rem);
+    height: calc(var(--dimension) - 1rem);
+  }
+  .rings span{
+    width: calc(var(--dimension) - 1rem);
+    height: calc(var(--dimension) - 1rem);
+  }
+}
+.rings span:first-child{
+    border-color: red;
+    transform: scaleX(1);
+    transform: scaleY(1);
+    mix-blend-mode: screen;
+    transition: all 1s  ;
+    animation: ring1 linear 3s infinite;
+}
+@keyframes ring1{
+  0% {
+    transform: rotate(0deg) scaleX(0.90) scaleY(1.10);
+  }
+  50% {
+    transform: rotate(200deg) scaleX(1.1) scaleY(1.00);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(0.90) scaleY(1.10);
+  }							
+}
+.rings span:nth-child(2){
+    border-color: green;
+    mix-blend-mode: screen;
+    animation: ring2 linear 2.5s infinite;
+}
+@keyframes ring2{
+  0% {
+    transform: rotate(0deg) scaleX(0.90) scaleY(1.05);
+  }
+  50% {
+    transform: rotate(100deg) scaleX(1.1) scaleY(1.00);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(0.90) scaleY(1.05);
+  }							
+}
+.rings span:nth-child(3){
+    border-color: orange;
+    mix-blend-mode: screen;
+    animation: ring3 linear 5s infinite;
+}
+@keyframes ring3{
+  0% {
+    transform: rotate(0deg) scaleX(0.90) scaleY(0.90);
+  }
+  50% {
+    transform: rotate(120deg) scaleX(1) scaleY(1.00);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(0.90) scaleY(0.90);
+  }							
+}
+.rings span:nth-child(4){
+    border-color: blue;
+    mix-blend-mode: screen;
+    animation: ring4 linear 4s infinite;
+
+}
+@keyframes ring4{
+  0% {
+    transform: rotate(0deg) scaleX(0.90) scaleY(1.10);
+  }
+ 25% {
+    transform: rotate(100deg) scaleX(1.10) scaleY(1.10);
+  }
+  50% {
+    transform: rotate(120deg) scaleX(1.00) scaleY(1.20);
+  }
+ 75% {
+    transform: rotate(180deg) scaleX(1.10) scaleY(1.10);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(0.90) scaleY(1.10);
+  }							
+}
+.rings span:last-child{
+    border-color: pink;
+    mix-blend-mode: screen;
+    animation: ring5 linear 5s infinite;
+}
+@keyframes ring5{
+  0% {
+    transform: rotate(0deg) scaleX(0.90) scaleY(1.00);
+  }
+  50% {
+    transform: rotate(180deg) scaleX(0.90) scaleY(1.00);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(0.90) scaleY(1.00);
+  }							
+}

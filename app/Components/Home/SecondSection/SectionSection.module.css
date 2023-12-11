@@ -1,0 +1,75 @@
+.container {
+  perspective: 100rem;
+  transform-style: preserve-3d;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-auto-flow: dense;
+}
+
+.cardContainer {
+  box-shadow: -0.2rem -0.2rem 0.2rem rgba(0, 0, 0, 0.2) inset,
+    -1.5rem -1.5rem 2rem rgba(0, 0, 0, 0.3);
+  animation: parallax linear;
+  animation-timeline: scroll();
+  --parallax-speed: -1.5;
+}
+
+.wrapper {
+  position: relative;
+  transform: translateX(2rem);
+}
+
+.card {
+  position: relative;
+  animation: parallax linear;
+  animation-timeline: scroll();
+  --parallax-speed: 6;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 767px) {
+  .card {
+  --parallax-speed: 3;
+  }
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 100px));
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.itemContainer {
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+    var(--bg),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  z-index: 999;
+}
+
+.item {
+  backdrop-filter: blur(5rem);
+  background-color: rgba(255, 255, 255, 0.6);
+}

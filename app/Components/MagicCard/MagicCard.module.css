@@ -1,0 +1,50 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.card::before {
+  content: "";
+  width: calc(100% + .6rem);
+  height: calc(100% + .6rem);
+  background-image: linear-gradient(
+    var(--rotate),
+    #075985,
+    #0369a1,
+    #0284c7,
+    #0ea5e9,
+    #38bdf8,
+    #7dd3fc,
+    #bae6fd,
+    #f0f9ff,
+    #fef2f2,
+    #fee2e2,
+    #fecaca,
+    #fca5a5,
+    #f87171,
+    #ef4444,
+    #b91c1c,
+    #991b1b
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: spin 7s linear infinite forwards;
+  transform: translateZ(-.1rem) translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}

@@ -1,0 +1,26 @@
+.headline {
+  position: relative;
+  width: 100%;
+  font-weight: 900;
+  height: 7rem;
+}
+
+@media (max-width: 767px) {
+  .headline {
+    height: 4rem;
+  }
+}
+
+@supports (backdrop-filter: blur(12px)) {
+  .headline .visuallyHidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .headline {
+    backdrop-filter: blur(2rem);
+    background: rgba(255, 255, 255, 0.5);
+    clip-path: var(--headline-clip-path);
+  }
+}

@@ -1,0 +1,97 @@
+.section {
+    height: 200vh;
+    background-image: url(/bg-3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: brightness(.5);
+}
+
+.section > div {
+    backdrop-filter: blur(.7rem);
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  scale: 0.95;
+}
+
+@supports (animation-timeline: scroll()) {
+  .content {
+    view-timeline: --content;
+    animation: grow linear both;
+    animation-timeline: scroll();
+    animation-range: 0 50vh;
+  }
+}
+
+@keyframes grow {
+  to {
+    scale: 1;
+  }
+}
+
+.content svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  top: 0;
+  overflow: visible !important;
+  z-index: -1;
+}
+
+@media (max-width: 767px){
+  .content svg {
+    right: 10%;
+  }
+}
+
+.content svg path {
+  stroke-width: clamp(2rem, 2vw, 4rem);
+}
+
+@media only screen and (orientation: portrait) {
+    .content svg {
+    /* display: none; */
+  }
+}
+
+.backers path {
+  stroke: hsl(0 0% 50%);
+}
+
+.fillers path:nth-of-type(1) {
+  --len: 8620;
+  stroke: hsl(140 80% 60%);
+}
+
+.fillers path:nth-of-type(2) {
+  --len: 7200;
+  stroke: hsl(140 90% 60%);
+}
+
+.fillers path:nth-of-type(3) {
+  --len: 7952;
+  stroke: hsl(140 90% 50%);
+}
+
+.fillers path {
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+}
+
+@supports (animation-timeline: scroll()) {
+  .fillers path {
+    animation: fill linear both;
+    animation-timeline: --content;
+    animation-range: entry-crossing -38% exit 12%;
+  }
+}
+
+@keyframes fill {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
