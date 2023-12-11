@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import LucysBackground from '../LucysBackgroud/LucysBackground';
 import Styles from './Work.module.css';
 import Image from 'next/image';
 
@@ -10,6 +9,24 @@ const Work = () => {
     const [sliderIndex, setSliderIndex] = useState(0);
     const [prevDisabled, setPrevDisabled] = useState(true);
     const [nextDisabled, setNextDisabled] = useState(false);
+    const [isMobile, setIsMobile] = useState(true);
+
+    useEffect(()=>{
+        if(window) {
+            window.addEventListener('resize', ()=>{
+                if(window.innerWidth > 767) {
+                    setIsMobile(false);
+                } else {
+                    setIsMobile(true);
+                }
+            });
+
+            return(()=>{
+                window.removeEventListener('resize', ()=>{});
+            })
+        }
+    }, []);
+
     useEffect(() => {
         const slider = sliderRef?.current;
         if (slider) {
@@ -94,52 +111,52 @@ const Work = () => {
                 <div className="mt-20 relative">
                     <div ref={sliderRef} className={`${Styles.slider}`}>
                         <div className=' md:overflow-hidden' style={{'--time': '30s' } as any}>
-                            <Image src='/website/1.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/1.png' alt='' width={1366} height={4256} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '15s' } as any}>
-                            <Image src='/website/3.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/3.png' alt='' width={1366} height={2393} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{ '--time': '30s' } as any}>
-                            <Image src='/website/4.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/4.png' alt='' width={1366} height={4917} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '55s' } as any}>
-                            <Image src='/website/5.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/5.png' alt='' width={1366} height={7936} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '40s' } as any}>
-                            <Image src='/website/7.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/7.png' alt='' width={1366} height={6380} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '50s' } as any}>
-                            <Image src='/website/8.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/8.png' alt='' width={1366} height={7033} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '60s' } as any}>
-                            <Image src='/website/9.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/9.png' alt='' width={1366} height={8634} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '20s' } as any}>
-                            <Image src='/website/10.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/10.png' alt='' width={1366} height={2740} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '18s' } as any}>
-                            <Image src='/website/11.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/11.png' alt='' width={1366} height={2770} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '50s' } as any}>
-                            <Image src='/website/12.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/12.png' alt='' width={1366} height={6453} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '18s' } as any}>
-                            <Image src='/website/13.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/13.png' alt='' width={1366} height={2397} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '60s' } as any}>
-                            <Image src='/website/14.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/14.png' alt='' width={1366} height={9258} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '65s' } as any}>
-                            <Image src='/website/15.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/15.png' alt='' width={1366} height={7428} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '35s' } as any}>
-                            <Image src='/website/16.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/16.png' alt='' width={1366} height={4432} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '35s' } as any}>
-                            <Image src='/website/17.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/17.png' alt='' width={1366} height={5535} quality={isMobile ? 1 : 75} />
                         </div>
                         <div className=' md:overflow-hidden' style={{'--time': '65s' } as any}>
-                            <Image src='/website/18.png' alt='' width={1366} height={4256} loading='eager' />
+                            <Image src='/website/18.png' alt='' width={1366} height={9260} quality={isMobile ? 1 : 75} />
                         </div>
                     </div>
                     <div>

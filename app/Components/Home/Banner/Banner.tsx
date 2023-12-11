@@ -11,9 +11,17 @@ const Banner = () => {
     const [isMobil, setIsMobile] = useState(true);
     useEffect(() => {
         if (window) {
-            if (window.innerWidth > 767) {
-                setIsMobile(false);
-            }
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 767) {
+                    setIsMobile(false);
+                } else {
+                    setIsMobile(true);
+                }
+            });
+
+            return (()=>{
+                window.removeEventListener('resize', ()=>{});
+            })
         }
     }, [])
     useEffect(() => {
